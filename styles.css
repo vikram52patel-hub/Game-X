@@ -1,0 +1,96 @@
+body {
+  text-align: center;
+  background-color: black;
+  font-family: 'Courier New', Courier, monospace;
+}
+#jd {
+  background-color: black;
+}
+h3 {
+  color: white;
+}
+table {
+  background-color: white;
+  padding: 10px;
+  margin-top: 10px;
+}
+h1 {
+  color: white;
+}
+p {
+  color: white;
+}
+
+.tablebox {
+  width: 75vw;
+  margin: 20px auto;
+}
+button {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+/* Neon Navbar Aesthetic */
+.navbar {
+  border-bottom: 2px solid #0f0;
+  box-shadow: 0 4px 15px rgba(0, 255, 0, 0.3);
+  background-color: #000 !important;
+  padding: 0.8rem 0;
+}
+
+.navbar-brand {
+  color: #0f0 !important;
+  text-shadow: 0 0 15px #0f0, 0 0 5px #fff;
+  font-weight: 800;
+  letter-spacing: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  text-shadow: 0 0 25px #0f0, 0 0 10px #fff;
+}
+
+.nav-link {
+  color: #0f0 !important;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1.2rem !important;
+  opacity: 0.8;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #fff !important;
+  text-shadow: 0 0 15px #0f0, 0 0 5px #0f0;
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+.dropdown-menu {
+  background-color: #000 !important;
+  border: 2px solid #0f0;
+  box-shadow: 0 0 25px rgba(0, 255, 0, 0.4);
+  margin-top: 10px;
+}
+
+.dropdown-item {
+  color: #0f0 !important;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.6rem 2rem;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #0f0 !important;
+  color: #000 !important;
+  text-shadow: none;
+}

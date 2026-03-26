@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GAME X</title>
+  <style>
+    #element {
+      text-align: center;
+      color: #0f0;
+      font-size: 3rem;
+      margin-top: 20px;
+      text-shadow: 0 0 10px rgb(0, 162, 255);
+    }
+
+    h3 {
+      text-align: center;
+      color: #0f0;
+      margin: 20px 0;
+      text-shadow: 0 0 8px #0f0;
+    }
+
+    .tablebox {
+      padding: 0 20px;
+    }
+
+    #jd {
+      color: #0f0;
+      text-shadow: 0 0 10px #0f0;
+    }
+
+    /* Buy button */
+    .buy-btn-wrap {
+      margin: 20px 0 40px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand shatter-link" href="index.html">GAME X</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active shatter-link" href="index.html">computers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link shatter-link" href="gaming chairs.html">gaming chairs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link shatter-link" href="rgb lights.html">rgb lights</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              other things
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item shatter-link" href="trending.html">trending</a>
+              </li>
+              <li>
+                <a class="dropdown-item shatter-link" href="recomended.html">recommended</a>
+              </li>
+              <li>
+                <a class="dropdown-item shatter-link" href="killswitch.html">kill</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- Right side: contact -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link shatter-link" href="trending.html#contact">contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <h1 id="element">GAME X</h1>
+  <br />
+  <br />
+
+  <div>
+    <h3>computers</h3>
+
+    <!-- Carousel -->
+    <div id="carouselExampleDark" class="carousel w-75 mx-auto carousel-dark slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_1280.jpg" class="d-block w-100"
+            alt="Game X Max" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5></h5>
+            <p>This is the Game X Max — third best</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            src="https://blogger.googleusercontent.com/img/a/AVvXsEjeqKdxF2Borzg0GU93Lc2haugfV6Dgpm4IR4ZIhHbA74hSz_V5jHCiFVaLSyp450El92UiWeWA0MZK0H3lMwuPRokVM2g8ETlJU_SQfYfhOGurps1N-WiYbARBEB5EaCL99ux046KvU0tJpp8NfVqy-ZRIDSFOxkN5yVuDQCeUENPhhZMsoeaNVaSF2QY=w1200-h630-p-k-no-nu"
+            class="d-block w-100" alt="Game X Model" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5></h5>
+            <p>This is the Game X MODEL — second best</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://tse3.mm.bing.net/th/id/OIP.V7HbVKJlpoCa_qqaXo8r0AHaEE?pid=Api&P=0&h=220"
+            class="d-block w-100" alt="Game X Future" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5></h5>
+            <p>This is the Game X FUTURE — the best one</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Table -->
+    <div class="tablebox">
+      <h1 class="text-center my-3 p-3" id="jd">Our Computers</h1>
+      <table class="table table-striped table-hover my-4">
+        <tr class="table-dark p-5">
+          <th class="table-dark">GAME X FUTURE</th>
+          <th class="table-dark">GAME X MODEL</th>
+          <th class="table-dark">GAME X MAX</th>
+        </tr>
+        <tr class="table-dark p-5">
+          <td>100% SEASONAL DISCOUNT</td>
+          <td>100% SEASONAL DISCOUNT</td>
+          <td>100% SEASONAL DISCOUNT</td>
+        </tr>
+        <tr class="table-dark">
+          <td>Built-in Internet</td>
+          <td>High Quality Internet</td>
+          <td>Satellite Internet</td>
+        </tr>
+        <tr class="table-dark">
+          <td>$9999 &rarr; $1</td>
+          <td>$500 &rarr; $1</td>
+          <td>$450 &rarr; $1</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Buy Button -->
+    <div class="buy-btn-wrap mx-5">
+      <a href="fake.html" class="shatter-link">
+        <button class="btn btn-dark p-4">
+          buy — definitely not a rick roll
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Typed.js -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed("#element", {
+      strings: ["Game X"],
+      typeSpeed: 50,
+      loop: true,
+    });
+
+    var typed2 = new Typed("#jd", {
+      strings: ["Buy computers from", "Game X"],
+      typeSpeed: 50,
+      loop: true,
+    });
+  </script>
+
+  <!-- Shatter Animation -->
+  <script src="shatter.js"></script>
+
+  <!-- Welcome Screen Audio: Subway Surfers → TikTok -->
+  <audio id="audio1" src="subway-surfers-bass-boosted.mp3"></audio>
+  <audio id="audio2" src="hold-up-tiktok.mp3"></audio>
+  <script>
+    var audio1 = document.getElementById('audio1');
+    var audio2 = document.getElementById('audio2');
+
+    // Play subway surfers as soon as the page loads
+    audio1.play().catch(function() {
+      // Autoplay blocked — wait for first user interaction
+      document.addEventListener('click', function onFirstClick() {
+        audio1.play();
+        document.removeEventListener('click', onFirstClick);
+      }, { once: true });
+    });
+
+    // When subway surfers finishes, immediately play tiktok
+    audio1.addEventListener('ended', function() {
+      audio2.play();
+    });
+  </script>
+</body>
+
+</html>

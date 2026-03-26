@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Comp foatible" content="ie=edge" />
+    <title>HTML + CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+          font-family: 'Courier New', Courier, monospace;
+          background-color:black;
+         
+      }
+
+      /* The Canvas Overlay (The Code Rain) */
+      #code-canvas {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 9998;
+          display: none; 
+          background: black;
+      }
+
+      /* The Shard Container */
+      #shard-container {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 9999;
+          pointer-events: none;
+          display: none;
+      }
+
+      .shard {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      /* Shard Shapes */
+      .shard:nth-child(1) { clip-path: polygon(0 0, 50% 0, 30% 50%, 0 60%); }
+      .shard:nth-child(2) { clip-path: polygon(50% 0, 100% 0, 100% 60%, 60% 40%, 30% 50%); }
+      .shard:nth-child(3) { clip-path: polygon(0 60%, 30% 50%, 60% 40%, 40% 100%, 0 100%); }
+      .shard:nth-child(4) { clip-path: polygon(60% 40%, 100% 60%, 100% 100%, 40% 100%); }
+
+      /* Explosion */
+      .shard.exploded { opacity: 0; }
+      .shard.exploded:nth-child(1) { transform: translate(-100px, -100px) rotate(-20deg) scale(1.1); }
+      .shard.exploded:nth-child(2) { transform: translate(100px, -100px) rotate(20deg) scale(1.1); }
+      .shard.exploded:nth-child(3) { transform: translate(-100px, 100px) rotate(20deg) scale(1.1); }
+      .shard.exploded:nth-child(4) { transform: translate(100px, 100px) rotate(-20deg) scale(1.1); }
+  </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light shatter-link" href="index.html">GAME X</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active text-light shatter-link" aria-current="page" href="index.html">computers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light shatter-link" href="">gaming chairs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light shatter-link" href="rgb lights.html">rgb lights</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown">
+                other things
+              </a>
+
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item shatter-link" href="#">trending</a></li>
+                <li><a class="dropdown-item shatter-link" href="#">recommended</a></li>
+                <li><a class="dropdown-item shatter-link" href="killswitch.html">kill</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+     <canvas id="code-canvas"></canvas>
+    <h1 id="element">GAME X</h1>
+    <br />
+    <br />
+    <div>
+      <h3>computers</h3>
+      <!-- crating carasele -->
+      <div id="carouselExampleDark" class="carousel w-75 mx-auto   carousel-dark slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_1280.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <p> This the Game X Max third best</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjeqKdxF2Borzg0GU93Lc2haugfV6Dgpm4IR4ZIhHbA74hSz_V5jHCiFVaLSyp450El92UiWeWA0MZK0H3lMwuPRokVM2g8ETlJU_SQfYfhOGurps1N-WiYbARBEB5EaCL99ux046KvU0tJpp8NfVqy-ZRIDSFOxkN5yVuDQCeUENPhhZMsoeaNVaSF2QY=w1200-h630-p-k-no-nu" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <p>This is the Game X MODEL secound best</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.V7HbVKJlpoCa_qqaXo8r0AHaEE?pid=Api&P=0&h=220" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <p> This is the Game X FUTRUE best one</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+      <div class="tablebox">
+        <h1 class="text-center my-3 p-3" id="jd">Our Computers</h1>
+    <table class="table table-striped table-hover my-4">
+      <tr class="table-dark p-5">
+        <th class="table-dark">GAME X FUTRUE</th>
+        <th class="table-dark">GAME X MODEL</th>
+        <th class="table-dark">GAME X MAX</th>
+      </tr>
+
+      <tr class="table-dark p-5">
+        <td>100% SESONAL DISCOUNT</td>
+        <td>100% SESONAL DISCOUNTS</td>
+        <td>100% SESONAL DISCOUNT</td>
+      </tr>
+
+      <tr class="table-dark">
+        <td>built in internet INTERNET</td>
+        <td>high Quality internet</td>
+        <td>satilight internet</td>
+      </tr>
+
+      <tr class="table-dark">
+        <td>9999$ > $1</td>
+        <td>500$  > $1</td>
+        <td>450$  > $1</td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <a href="fake.html">
+    <button class="mx-5 btn btn-dark p-4">buy definitely not a rick roll</button>
+  </a>
+  </div>
+  
+ 
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  
+  <script>
+    
+    var typed = new Typed("#element", {
+      strings: ["Game X"],
+      typeSpeed: 50,
+      loop: true,
+    });
+  </script>
+
+      <script>
+        var typed = new Typed("#jd", {
+          strings: ["Buy comomputers from ", "Game X"],
+          typeSpeed: 50,
+          loop: true,
+        });
+      </script>
+
+<script>
+  // 1. SELECT ALL LINKS WITH CLASS 'shatter-link' (Instead of ID)
+  const buttons = document.querySelectorAll('.shatter-link');
+  
+  const canvas = document.getElementById('code-canvas');
+  const ctx = canvas.getContext('2d');
+  const shardContainer = document.getElementById('shard-container');
+
+  let matrixInterval;
+  const fontSize = 16;
+  let columns;
+  let drops = [];
+  const characters = "\#$!@&^*%#*#%^%##$$#^ε█N◙+↓╖¡i┤û▐┤▐140τl∞Φ∞xLB7_+";
+
+  function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      columns = canvas.width / fontSize;
+      drops = [];
+      for (let x = 0; x < columns; x++) drops[x] = 1;
+  }
+
+  function drawMatrix() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#0F0"; 
+      ctx.font = fontSize + "px monospace";
+
+      for (let i = 0; i < drops.length; i++) {
+          const text = characters.charAt(Math.floor(Math.random() * characters.length));
+          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+              drops[i] = 0;
+          }
+          drops[i]++;
+      }
+  }
+
+  function triggerShatter(url) {
+      clearInterval(matrixInterval);
+      const dataUrl = canvas.toDataURL();
+
+      shardContainer.style.display = 'block';
+      shardContainer.innerHTML = ''; 
+      for(let i=0; i<4; i++) {
+          let shard = document.createElement('div');
+          shard.classList.add('shard');
+          shard.style.backgroundImage = `url(${dataUrl})`;
+          shardContainer.appendChild(shard);
+      }
+
+      canvas.style.display = 'none';
+      void shardContainer.offsetWidth; 
+
+      const shards = document.querySelectorAll('.shard');
+      shards.forEach(s => s.classList.add('exploded'));
+
+      setTimeout(() => {
+          window.location.href = url;
+      }, 800);
+  }
+
+  // 2. LOOP THROUGH ALL BUTTONS AND ADD LISTENER
+  buttons.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+          // If the link is just "#", don't do anything (optional check)
+          if(this.getAttribute('href') === '#') return;
+
+          e.preventDefault(); 
+          const targetUrl = this.href;
+
+          resizeCanvas();
+          canvas.style.display = 'block';
+          
+          matrixInterval = setInterval(drawMatrix, 33);
+
+          setTimeout(() => {
+              triggerShatter(targetUrl);
+          }, 2000);
+      });
+  });
+</script>
+      
+      </body>
+</html>
