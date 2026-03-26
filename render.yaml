@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: game-x
+    runtime: static
+    staticPublishPath: .
+    buildCommand: ""
+    pullRequestPreviewsEnabled: false
